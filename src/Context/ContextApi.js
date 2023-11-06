@@ -7,7 +7,7 @@ export const AppContent = (props) => {
   const [loading, setLoading] = useState(false);
   const [SearchResults, setSearchResult] = useState([]);
   const [SelectCategories, setSelectCategories] = useState("New");
-  const [mobileMenu, setmobileMenu] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
   useEffect(() => {
     fetchSelectedCategoryData(SelectCategories)
   }, [SelectCategories]);
@@ -17,7 +17,7 @@ export const AppContent = (props) => {
              setSearchResult(contents)
             setLoading(false);
         }).catch((err)=>{
-         console.log(err);
+         console.error(err);
 
         })
   }
@@ -31,7 +31,7 @@ export const AppContent = (props) => {
         SelectCategories,
         setSelectCategories,
         mobileMenu,
-        setmobileMenu,
+        setMobileMenu,
       }}
     >
       {props.children}
