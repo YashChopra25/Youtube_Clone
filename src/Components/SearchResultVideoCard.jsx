@@ -40,10 +40,11 @@ const SearchResultVideoCard = ({ video }) => {
                 )}
               </span>
               <div className="flex text-sm font-semibold text-white/[0.7] truncate overflow-hidden">
-                <span>{`${abbreviateNumber(
-                  video?.stats?.views,
-                  2
-                )} views`}</span>
+                <span>
+                 
+                  { video?.stats?.views &&`${abbreviateNumber(video?.stats?.views,2)} views`}
+                  { video?.stats?.viewers &&`${abbreviateNumber(video?.stats?.viewers,2)} views`}
+                </span>
                 <span className="flex text-[24px] leading-none font-bold text-white/[0.7] relative top-[-10px] mx-1">
                   .
                 </span>
